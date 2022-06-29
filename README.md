@@ -43,3 +43,17 @@ function sayHello(name){
 console.log("my name is "+name);
 }
 물론 fuction도 object 구성원이 가능함.
+
+<6/29> ~3.0
+복습&복습 variable~function
+
+return : 값을 사출 (함수로부터) 리턴하면 이후 함수내용은 실행 x
+
+conditional : 조건문
+*prompt : 메세지 입력 창띄우기. prompt(message,default) => 메세지는 문자열/디폴트는 ?
+메세지를 입력하면 그 값을 가짐. 19 입력시 prompt가 포함된 함수는 19를 return한다.
+typeof : 자료형 반환. console.log(typeof name); 처럼 씀.
+parseInt : 대상을 number로 전환. 변환시 숫자가 아닐 떄, "NaN" 숫자가 아니라는 뜻의 문자를 반환함.
+isNaN(a) : a가 NaN인지 판단하여 True&False(boolean) 반환.
+
+&& and, || or 

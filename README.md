@@ -64,5 +64,24 @@ documents : 브라우저에 내장되어있는 object (많은 내용 포함) HTM
 브라우저가 정보가 아주 많이 든 html object인 document를 콘솔에서 보여주는 형식임.
 console에서 document 수정도 가능함.
 document.title="jw6133";
-
+|부가설명|
+- document는 HTML파일을 오브젝트화 해서 JS로 가져온다
+- 가져온 document에서 getElementById를 통해 HTML의 특정 element를 가져올 수 있다
+- 가져온 element의 속성들을 통해 내용을 추가하거나 수정을 할 수 있다
+- 
 h1 id="aaa">"grab me!"</h1> => document.getElementById("aaa");
+
+element 자세하게 => console.dir()
+결론: javascript에서 HTML의 요소를 변경 가능하다
+
+<div class = "hello">
+  h1 "grab me!" </h1>
+  </div>                  => document.getElementsByTagName("h1"); (class 라면 getElementsByClass.)
+  
+NICO's PICK : querySelector&querySelectorAll => CSS 방식으로 검색 
+예시 : class hello 속의 h1태그 => querySelector(".hello h1"); (동일한거 여러개 있을 시 처음거만 나옴.)
+동일한거 다 가져오고 싶을 때. => querySelectorAll
+.hello h1:first-child
+querySelector 에서의 id는 #을 붙어야 함. #hello
+
+<<document.querySelector 중요>>

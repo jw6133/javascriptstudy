@@ -45,7 +45,7 @@ console.log("my name is "+name);
 물론 fuction도 object 구성원이 가능함.
 
 <6/29> ~3.0
-복습&복습 variable~function
+복습&복습 variable to function
 
 return : 값을 사출 (함수로부터) 리턴하면 이후 함수내용은 실행 x
 
@@ -57,3 +57,12 @@ parseInt : 대상을 number로 전환. 변환시 숫자가 아닐 떄, "NaN" 숫
 isNaN(a) : a가 NaN인지 판단하여 True&False(boolean) 반환.
 
 && and, || or 
+
+<6/30>
+documents : 브라우저에 내장되어있는 object (많은 내용 포함) HTML 객체임.
+이것을 콘솔에선 javascript 형식으로 보여줌.
+브라우저가 정보가 아주 많이 든 html object인 document를 콘솔에서 보여주는 형식임.
+console에서 document 수정도 가능함.
+document.title="jw6133";
+
+<h1 id="aaa">"grab me!"</h1> => document.getElementById("aaa");

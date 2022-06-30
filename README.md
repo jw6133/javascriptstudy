@@ -65,4 +65,4 @@ documents : 브라우저에 내장되어있는 object (많은 내용 포함) HTM
 console에서 document 수정도 가능함.
 document.title="jw6133";
 
-//<h1 id="aaa">"grab me!"</h1> => document.getElementById("aaa");
+h1 id="aaa">"grab me!"</h1> => document.getElementById("aaa");

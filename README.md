@@ -58,7 +58,7 @@ isNaN(a) : a가 NaN인지 판단하여 True&False(boolean) 반환.
 
 && and, || or 
 
-<6/30>
+<6/30> ~3.2
 documents : 브라우저에 내장되어있는 object (많은 내용 포함) HTML 객체임.
 이것을 콘솔에선 javascript 형식으로 보여줌.
 브라우저가 정보가 아주 많이 든 html object인 document를 콘솔에서 보여주는 형식임.
@@ -85,3 +85,34 @@ NICO's PICK : querySelector&querySelectorAll => CSS 방식으로 검색
 querySelector 에서의 id는 #을 붙어야 함. #hello
 
 <<document.querySelector 중요>>
+
+<7/1> ~3.8
+const titles = document.querySelector("div.hello:first-child h1"); 이후 titles.style.color = "blue"; 로, html 요소를 javascript로 변환할 수 있다는 것이 강력한 요소.
+
+console.dir 을 하면 나오는 object 중, 접두사로 on이 붙은 on~이 바로 EVENT이다.
+event는 javascript가 listen 할 수 있음.
+
+addEventListener => const요소.addEventListener("감지할 이벤트",감지했을 때 할거);
+title.onclick=handleTitleClick; = title.addEventListener("click",handleTitleClick);
+단 NICO는 addeventlistener를 선호함.
+*이벤트 찾는 법*
+예시) h1 html element mdn => html의 h1에 연계가능한 이벤트를 MDN에서 찾는다(구글링). Mozila Developing Network
+그럼 MDN 사이트 중 "Web Api"라고 써져있는 사이트에 들어간다.
+그럼 Event 섹터에 있음.
+
+다른 방법 : console.dir()로 properties를 살펴보면 사용가능한 event 목록이 나옴 (on으로 시작하고 null로 되있을거임)
+document는 div 가져오기가 안됨. document는 필수요소인 body/head/title 등이 됨.
+
+if else문에서 조건을 걸때 =는 3개 써야함. if(h1.style.color==="blue")
+
+css에서 클래스 생성 => .클래스 ex).active{ }
+
+js로 class 이름 변경은 안하는게 좋음 => 많은 버그
+변경방법 : classList
+toggle : class 가 존재하는지 확인. 존재하면, 삭제. 존재하지 않으면, 추가.
+ if(h1.classList.contains(clickedClass)){
+     h1.classList.remove(clickedClass);
+    }
+    else{
+        h1.classList.add(clickedClass); 
+    }                                                  => toggle 하나로 끝.  -> h1.classList.toggle("clicked");

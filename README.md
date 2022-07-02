@@ -117,9 +117,36 @@ toggle : class 가 존재하는지 확인. 존재하면, 삭제. 존재하지 �
         h1.classList.add(clickedClass); 
     }                                                  => toggle 하나로 끝.  -> h1.classList.toggle("clicked");
 
-<7/2>
+<7/2> ~4.4
 html에  <input type="text" placeholder=="What is your name?"> 생성하면 쓸수있는 칸이 나옴.
 이걸 div에 포함시켜서 js에서 div를 목표로 서치해서 가져오면, 안에 입력한 값을 function을 통해 조정할 수 있다. 위에서 한 clickevent같은걸로.
 물론 클릭할 버튼 <button>aaa</button>은 따로 만들어야 한다.
 
 길이 구하기 => 구하기.length
+
+<input>을 <form> 안에 넣어야 값이 무조건 필요하다는 조건이 발현됨. (기본탑재) -> 단, 새로고침됨. 버튼 누를때마다. (버튼은  input의 value을 사용함. 그것이 새로고침을 이끌어냄.)
+
+form 안에서 enter를 누르고 input이 더는 존재하지 않으면 자동으로 submit되는 규칙 => data를 기억하게 하려면, 이것을 막아야 함. (새로고침을 유발하기 때문.
+function에 () 추가시 바로 실행에 들어감. (중요!)
+
+(더많이중요!) js는 eventListener function을 실행할 때. 곧이곧대로 실행하지 않는다.
+burster() 함수가 있다면, js는 이 함수에 첫번째 인수에 나에게 도움을 줄만한 정보를 포함해서 함수를 호출한다고 한다. 
+burster("aaa")로 실행한다고 이해? 하면 될듯
+이 도움을 줄만한 정보는, 함수에서 일어난 일에 대한 세부정보 (믿을만한지 boolean, 명령타입이 뭔지, 명령의 타겟은뭔지.. 등등 진짜 세부정보.)
+.preventDefault() 는 function이 기본적으로 실행하는 일을 막아줌. (기본적으로 submit하면 새로고침을 하는데, 그런걸 막아주는거같음.)
+
+여튼 그래서 이벤트리스너에 함수호출할때, 함수에다가 임의의 인수를 넣지 않아도 될때 넣으면, 함수 이벤트에 대한 TMI를 넣어서 내가 쓸수 있게 하는 거 같음.
+물론 인수 안넣으면 안받는거고, 넣으면 받는거고. 이 TMI는 내가 또 쓸수도 있겠다. 이 첫 인수는 "event"라고 명칭하는게 관행이라고 함.
+
+여튼 기억하기 위한 조건인 129줄의 조건은 .preventDefault이고, 적용 후 원래대로 value를 받아 출력하면 목표가 달성된다.
+
+alert는 모든것을 멈춤. 하지만 alert를 확인버튼 눌러서 끄면 킵고잉.
+이 TMI 중 "path"라는 부분을 보면, 이 이벤트가 어떤 과정을 통해 실행되는지 나옴. 역순으로. ex) a,body,html,document,Windows => 윈도우의 document속 html속 body의 a로 실행.
+
+css로 숨기기 => display:none
+
+문자열을 저장하는 변수는 전부 대문자에 _로 이어서 만드는 관행이 있음.
+
+문자열 작성 팁
+greeting.innerText = "hello "+username; 이랑 
+greeting.innerText = `Hello ${username}; 은 같음. `문자열 ${변수명}` 단, ""는 쓰면 안됨. "" 쓸거면 +쓰세용 `이거는 ~ 이랑 같이있는거임. 메이플 캐시샵

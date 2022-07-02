@@ -116,3 +116,10 @@ toggle : class 가 존재하는지 확인. 존재하면, 삭제. 존재하지 �
     else{
         h1.classList.add(clickedClass); 
     }                                                  => toggle 하나로 끝.  -> h1.classList.toggle("clicked");
+
+<7/2>
+html에  <input type="text" placeholder=="What is your name?"> 생성하면 쓸수있는 칸이 나옴.
+이걸 div에 포함시켜서 js에서 div를 목표로 서치해서 가져오면, 안에 입력한 값을 function을 통해 조정할 수 있다. 위에서 한 clickevent같은걸로.
+물론 클릭할 버튼 <button>aaa</button>은 따로 만들어야 한다.
+
+길이 구하기 => 구하기.length

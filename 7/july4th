@@ -29,3 +29,14 @@ date 뒤에 .getdate .getHour .getday .getFullyear 등등으로 개별적인 요
 뒤쪽에 추가하는 버전은 .padEnd()
 
 "무언가"를 문자열로 변환하고 싶을 때, => String("무언가")
+
+7/7 ~6.1
+math module => js에 기본 탑재.
+math.random() * a => 0부터 a까지 숫자 랜덤 하나 출력
+math.round() = 반올림 (정수로)
+math.celi() = 올림 (정수로)
+math.floor() = 내림 (정수로)
+
+bgImage.src "src"=source
+
+document.body.appendChild(); body에 요소 추가

@@ -40,3 +40,6 @@ math.floor() = 내림 (정수로)
 bgImage.src "src"=source
 
 document.body.appendChild(); body에 요소 추가
+
+7/8 ~7.0
+복습 및 todolist 세팅

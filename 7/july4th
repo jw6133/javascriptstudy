@@ -43,3 +43,20 @@ document.body.appendChild(); body에 요소 추가
 
 7/8 ~7.0
 복습 및 todolist 세팅
+
+7/9 ~7.2
+const li = document.createElement("li");
+    const span = document.createElement("span");
+    li.appendChild(span);
+    span.innerText = newTodo;  => add Todolist
+    
+    const button = document.createElement("button");
+    button.innerText="X";
+    li.appendChild(button);
+함수에 ()속 요소로 event를 넣어주면, 그 event에는 발동된 순간의 event가 저장된다.
+즉, 여러 버튼중 하나의 버튼을 누르면 그 특정 버튼을 눌렀다는 사실에 event에 저장됨.
+그럼 그 event의 dir 요소 중, path(경로)를 조사하면 어디서 발생한건지 추적이 가능.
+path로 추적하지 않아도 경로의 목적지는 "target"임.
+deleteTodo를 만들기 위해 알아야 할건 클릭된 버튼이 아니라 버튼의 부모. 즉 어느 li인지. => parentElement
+
+결론적으로, 클릭된 이벤트의(event), 목적지의(target), 부모(parentElement) ====> event.target.parentElement

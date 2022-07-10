@@ -60,3 +60,13 @@ path로 추적하지 않아도 경로의 목적지는 "target"임.
 deleteTodo를 만들기 위해 알아야 할건 클릭된 버튼이 아니라 버튼의 부모. 즉 어느 li인지. => parentElement
 
 결론적으로, 클릭된 이벤트의(event), 목적지의(target), 부모(parentElement) ====> event.target.parentElement
+
+7/10 ~7.5 
+저장 = localstorage에 저장.
+JSON.stringify() = 뭐든간에 string으로 저장.
+JSON.parse() = string을 object인 array로 저장.
+
+배열.array.forEach(ㅁ); 배열속에 있는 요소 하나씩을 ㅁ에다 넣어서 실행. ㅁ은 function.
+function()에 "item"을 넣으면, foreach로 넣어진 배열에 실행되고있는 argument를 하나씩 꺼내서 알려줌. function(item)
+
+이전거도 저장하려면, 저장되는 배열을 const에서 let으로 바꿔주면됨.

@@ -14,3 +14,18 @@ let sum = function(a, b) {
 };
 위의 화살표 함수를 이용하면, .filter에서 함수를 따로 만들 필요가 없음.
 array.filter(item => item > 2)
+
+7/13 ~8.1
+navigator.geolocation.getCurrentPosition(a,b); => 내위치. a는 잘 작동됬을때 사용할거, b는 에러일때 쓸거 (함수)
+
+function onGeoOk(position) {
+    const lat = position.coords.latitude;
+    const lng = position.coords.longitude;
+    console.log("You live in", lat, lng);
+  }                                                 
+  
+  = latitude는 위도 longitude는 경도.
+  이걸 위치로 바꿔줄 api = openweathermap.org
+  https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+  You live in 37.5427083 127.0936762
+  https://api.openweathermap.org/data/2.5/weather?lat=37.5427083&lon=127.0936762&appid=1e387d50f02e1624f01db6925218db94&units=metric
